@@ -42,11 +42,17 @@ public class Task1_5 {
 
          //i=1 iが9以下の時 1ずつたす
          for (i = 1; i <= 9; i++) {
+            //iと||の段落を表示
+            System.out.print(i + "||");
+            
             //j=1 jが9以下の時 1ずつたす　
             for (int j = 1; j <= 9; j++) {
-                //i*jの結果を表示
-                System.out.println(i*j);
+
+                //i*jの結果と後ろに|をつけて表示
+                System.out.print( i*j + "|");
             }
+            //一つの段が終われば改行
+            System.out.println();
             
         }
 
