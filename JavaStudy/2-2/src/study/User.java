@@ -12,7 +12,7 @@ class User {
 
     // コンストラクタ
     public User(String userName, int id, String password) {
-        this.userName = userName;
+        this.userName= userName;
         this.id = id;
         this.password = password;
     }
