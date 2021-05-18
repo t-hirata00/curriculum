@@ -45,10 +45,9 @@ public class Study {
 
         // ③ カリキュラムを参考に拡張for文を使って、課題の画像と同じ表示になるよう記述してください。
         // 「shohinList」と「shopMap」が保持する値を上手く利用しましょう。
-        
-        // entrySetを使用してMapに含まれる要素の「キー／値」のセットを取得
-        for (Map.Entry<String,Integer > entry : shopMap.entrySet()) {
-            System.out.println("キー: " + entry.getKey() + "／値: " + entry.getValue());
+        for (String key : shopMap.keySet()) {
+        	int value = shopMap.get(key);
+            System.out.println("キー: " + key + "／値: " + value);
         }
 
 
