@@ -1,0 +1,22 @@
+@media screen and (max-width:767px){
+
+    .content{
+        width: 300px;
+    }
+
+    .main-body1{
+        width: 100px;
+    }
+
+    .main-body2{
+        width: 200px;
+    }
+
+    .main-body2-over-left{
+        width: 125px;
+    }
+
+    .main-body2-over-right{
+        width: 75px;
+    }
+}
