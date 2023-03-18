@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- jQueryを動かすために必要な物がここに必要 -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <button class="click">クリック</button>
+    <script>
+      //  ここにjQueryを記入
+      //width幅の取得
+      var left = $(".left").width();
+      console.log(left);
+      //ボタン押下時のアクション
+      $("button").click(function () {
+        //ボタン押下の確認
+        console.log("クリック確認！");
+        //class名が無ければclass名activeを追加
+        $(this).toggleClass("active");
+        //class名activeがあるかの確認(あればtrue)
+        var flg = $(this).hasClass("active");
+        console.log(flg);
+        if (flg == true) {
+          //activeがあるときの処理
+          onFunc();
+        } else {
+          //activeがないときの処理
+          offFunc();
+        }
+        function onFunc() {
+          $("#check").text("ONの処理を実行するよ！");
+          $(".left").animate({ width: "0%" }, 2000);
+          $(".right").animate({ width: "0%" }, 2000);
+        }
+        function offFunc() {
+          $("#check").text("OFFの処理を実行するよ！");
+          $(".left").animate({ width: "50%" }, 2000);
+          $(".right").animate({ width: "50%" }, 2000);
+        }
+      });
+    </script>
+  </body>
+</html>
